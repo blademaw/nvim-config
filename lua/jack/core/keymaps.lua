@@ -3,7 +3,6 @@ vim.g.mapleader = " " -- space leader key
 local keymap = vim.keymap -- conciseness
 
 -- general
-keymap.set("i", "fd", "<ESC>") -- exit insert mode
 keymap.set("n", "x", '"_x') -- don't copy single deleted chars
 
 -- frames
