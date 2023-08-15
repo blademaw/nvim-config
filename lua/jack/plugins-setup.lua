@@ -54,6 +54,9 @@ return packer.startup(function(use)
   use("williamboman/mason.nvim") -- LSP
   use("neovim/nvim-lspconfig") -- servers
   use("williamboman/mason-lspconfig.nvim")
+  
+  use("jcorbin/vim-lobster") -- lobster
+  use("cheap-glitch/vim-v") -- v syntax highlighting
 
   use("hrsh7th/cmp-nvim-lsp") -- configure lsp servers in autocomplete
   use({ "glepnir/lspsaga.nvim", branch = "main" }) -- enhanced UI
@@ -80,5 +83,11 @@ return packer.startup(function(use)
   -- use("luk400/vim-jukit") -- ipython in nvim
   use("jpalardy/vim-slime") -- send text to other window
   use({ "dccsillag/magma-nvim", run = ":UpdateRemotePlugins" }) -- integrated development
+
+  -- comments
+  use({ "folke/todo-comments.nvim" }) -- for fixme-type highlighting
+
+  -- gruvbox
+  -- use({"ellisonleao/gruvbox.nvim"}) -- theme
 end)
 

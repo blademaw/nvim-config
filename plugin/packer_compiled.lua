@@ -194,6 +194,11 @@ _G.packer_plugins = {
     path = "/Users/jack/.local/share/nvim/site/pack/packer/start/telescope.nvim",
     url = "https://github.com/nvim-telescope/telescope.nvim"
   },
+  ["todo-comments.nvim"] = {
+    loaded = true,
+    path = "/Users/jack/.local/share/nvim/site/pack/packer/start/todo-comments.nvim",
+    url = "https://github.com/folke/todo-comments.nvim"
+  },
   undotree = {
     loaded = true,
     path = "/Users/jack/.local/share/nvim/site/pack/packer/start/undotree",
@@ -208,6 +213,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/jack/.local/share/nvim/site/pack/packer/start/vim-fugitive",
     url = "https://github.com/tpope/vim-fugitive"
+  },
+  ["vim-lobster"] = {
+    loaded = true,
+    path = "/Users/jack/.local/share/nvim/site/pack/packer/start/vim-lobster",
+    url = "https://github.com/jcorbin/vim-lobster"
   },
   ["vim-maximizer"] = {
     loaded = true,
@@ -228,6 +238,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/jack/.local/share/nvim/site/pack/packer/start/vim-tmux-navigator",
     url = "https://github.com/christoomey/vim-tmux-navigator"
+  },
+  ["vim-v"] = {
+    loaded = true,
+    path = "/Users/jack/.local/share/nvim/site/pack/packer/start/vim-v",
+    url = "https://github.com/cheap-glitch/vim-v"
   }
 }
 

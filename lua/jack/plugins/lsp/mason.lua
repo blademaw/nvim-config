@@ -17,6 +17,7 @@ mason_lspconfig.setup({
     "pylsp",
     "lua_ls",
     "rust_analyzer",
+    "gopls",
   }
 })
 

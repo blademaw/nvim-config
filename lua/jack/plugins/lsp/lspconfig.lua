@@ -16,19 +16,25 @@ local on_attach = function(client, bufnr)
   local opts = { noremap = true, silent = true, buffer = bufnr }
 
   -- set keybinds
-  keymap.set("n", "gf", "<cmd>Lspsaga lsp_finder<CR>", opts) -- show definition, references
-  keymap.set("n", "gd", "<Cmd>lua vim.lsp.buf.declaration()<CR>", opts) -- got to declaration
-  keymap.set("n", "gD", "<cmd>Lspsaga peek_definition<CR>", opts) -- see definition and make edits in window
-  keymap.set("n", "gi", "<cmd>lua vim.lsp.buf.implementation()<CR>", opts) -- go to implementation
-  keymap.set("n", "<leader>ca", "<cmd>Lspsaga code_action<CR>", opts) -- see available code actions
-
-  keymap.set("n", "<leader>rn", "<cmd>Lspsaga rename<CR>", opts) -- smart rename
-  keymap.set("n", "<leader>D", "<cmd>Lspsaga show_line_diagnostics<CR>", opts) -- show  diagnostics for line
-  keymap.set("n", "<leader>d", "<cmd>Lspsaga show_cursor_diagnostics<CR>", opts) -- show diagnostics for cursor
-  keymap.set("n", "[d", ":Lspsaga diagnostic_jump_prev<CR>", opts) -- jump to previous diagnostic in buffer
-  keymap.set("n", "]d", ":Lspsaga diagnostic_jump_next<CR>", opts) -- jump to next diagnostic in buffer
-  keymap.set("n", "K", "<cmd>Lspsaga hover_doc<CR>", opts) -- show documentation for what is under cursor
-  keymap.set("n", "<leader>o", "<cmd>LSoutlineToggle<CR>", opts) -- see outline on right hand side
+  -- keymap.set("n", "gf", "<cmd>Lspsaga lsp_finder<CR>", opts) -- show definition, references
+  vim.keymap.set("n", "gd", function () vim.lsp.buf.definition() end, opts)
+  vim.keymap.set("n", "K", function () vim.lsp.buf.hover() end, opts) -- hover definition
+  vim.keymap.set("n", "<leader>ws", function () vim.lsp.buf.workspace_symbol() end, opts) -- 
+  vim.keymap.set("n", "<leader>d", function () vim.diagnostic.open_float() end, opts) -- 
+  vim.keymap.set("n", "[d", function () vim.diagnostic.goto_next() end, opts)
+  vim.keymap.set("n", "]d", function () vim.diagnostic.goto_prev() end, opts)
+  vim.keymap.set("n", "<leader>ca", function () vim.lsp.buf.code_action() end, opts)
+  vim.keymap.set("i", "<C-h>", function () vim.lsp.buf.signature_help() end, opts)
+  vim.keymap.set("n", "<C-h>", function () vim.lsp.buf.signature_help() end, opts)
+  vim.keymap.set("n", "<leader>rn", function () vim.lsp.buf.rename() end, opts)
+  -- keymap.set("n", "gD", "<cmd>Lspsaga peek_definition<CR>", opts) -- see definition and make edits in window
+  -- keymap.set("n", "gi", "<cmd>lua vim.lsp.buf.implementation()<CR>", opts) -- go to implementation
+  -- keymap.set("n", "<leader>D", "<cmd>Lspsaga show_line_diagnostics<CR>", opts) -- show  diagnostics for line
+  -- keymap.set("n", "<leader>d", "<cmd>Lspsaga show_cursor_diagnostics<CR>", opts) -- show diagnostics for cursor
+  -- keymap.set("n", "[d", ":Lspsaga diagnostic_jump_prev<CR>", opts) -- jump to previous diagnostic in buffer
+  -- keymap.set("n", "]d", ":Lspsaga diagnostic_jump_next<CR>", opts) -- jump to next diagnostic in buffer
+  -- keymap.set("n", "K", "<cmd>Lspsaga hover_doc<CR>", opts) -- show documentation for what is under cursor
+  -- keymap.set("n", "<leader>o", "<cmd>LSoutlineToggle<CR>", opts) -- see outline on right hand side
 end
 
 -- used to enable autocompletion (assign to every lsp server config)
@@ -70,6 +76,11 @@ lspconfig["lua_ls"].setup({
 })
 
 lspconfig["rust_analyzer"].setup({
+  capabilities = capabilities,
+  on_attach = on_attach,
+})
+
+lspconfig["gopls"].setup({
   capabilities = capabilities,
   on_attach = on_attach,
 })
