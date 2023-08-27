@@ -25,7 +25,6 @@ local on_attach = function(client, bufnr)
   vim.keymap.set("n", "]d", function () vim.diagnostic.goto_prev() end, opts)
   vim.keymap.set("n", "<leader>ca", function () vim.lsp.buf.code_action() end, opts)
   vim.keymap.set("i", "<C-h>", function () vim.lsp.buf.signature_help() end, opts)
-  vim.keymap.set("n", "<C-h>", function () vim.lsp.buf.signature_help() end, opts)
   vim.keymap.set("n", "<leader>rn", function () vim.lsp.buf.rename() end, opts)
   -- keymap.set("n", "gD", "<cmd>Lspsaga peek_definition<CR>", opts) -- see definition and make edits in window
   -- keymap.set("n", "gi", "<cmd>lua vim.lsp.buf.implementation()<CR>", opts) -- go to implementation
