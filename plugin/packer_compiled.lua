@@ -199,6 +199,11 @@ _G.packer_plugins = {
     path = "/Users/jack/.local/share/nvim/site/pack/packer/start/todo-comments.nvim",
     url = "https://github.com/folke/todo-comments.nvim"
   },
+  ultisnips = {
+    loaded = true,
+    path = "/Users/jack/.local/share/nvim/site/pack/packer/start/ultisnips",
+    url = "https://github.com/SirVer/ultisnips"
+  },
   undotree = {
     loaded = true,
     path = "/Users/jack/.local/share/nvim/site/pack/packer/start/undotree",
@@ -229,6 +234,11 @@ _G.packer_plugins = {
     path = "/Users/jack/.local/share/nvim/site/pack/packer/start/vim-slime",
     url = "https://github.com/jpalardy/vim-slime"
   },
+  ["vim-snippets"] = {
+    loaded = true,
+    path = "/Users/jack/.local/share/nvim/site/pack/packer/start/vim-snippets",
+    url = "https://github.com/honza/vim-snippets"
+  },
   ["vim-surround"] = {
     loaded = true,
     path = "/Users/jack/.local/share/nvim/site/pack/packer/start/vim-surround",
@@ -243,6 +253,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/jack/.local/share/nvim/site/pack/packer/start/vim-v",
     url = "https://github.com/cheap-glitch/vim-v"
+  },
+  vimtex = {
+    loaded = true,
+    path = "/Users/jack/.local/share/nvim/site/pack/packer/start/vimtex",
+    url = "https://github.com/lervag/vimtex"
   }
 }
 

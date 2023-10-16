@@ -54,9 +54,13 @@ return packer.startup(function(use)
   use("williamboman/mason.nvim") -- LSP
   use("neovim/nvim-lspconfig") -- servers
   use("williamboman/mason-lspconfig.nvim")
-  
   use("jcorbin/vim-lobster") -- lobster
   use("cheap-glitch/vim-v") -- v syntax highlighting
+
+  -- TeX for vim setup
+  use("lervag/vimtex") -- for LaTeX
+  use("SirVer/ultisnips") -- for snips
+  use("honza/vim-snippets")
 
   use("hrsh7th/cmp-nvim-lsp") -- configure lsp servers in autocomplete
   use({ "glepnir/lspsaga.nvim", branch = "main" }) -- enhanced UI

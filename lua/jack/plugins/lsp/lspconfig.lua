@@ -83,6 +83,12 @@ lspconfig["gopls"].setup({
   capabilities = capabilities,
   on_attach = on_attach,
 })
+
+lspconfig["ocamllsp"].setup({
+  capabilities = capabilities,
+  on_attach = on_attach,
+})
+
 -- maybe one day I'll set this up
 -- lspconfig.prolog_lsp.setup({
 --   capabilities = capabilities,

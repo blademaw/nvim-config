@@ -15,3 +15,7 @@ require("jack.plugins.treesitter")
 require("jack.plugins.magma-nvim")
 require("jack.plugins.vim-slime")
 require("jack.plugins.todo-comments")
+require("jack.plugins.ultisnips")
+require("jack.plugins.vimtex")
+
+-- vim.g.vimtex_view_method='skim'
